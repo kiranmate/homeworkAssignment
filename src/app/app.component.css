@@ -1,0 +1,155 @@
+@import "wijmo/styles/themes/wijmo.theme.material.css";
+.wj-control {
+  background-color: #e7f5f5
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  mat-form-field {
+    margin-right: 12px;
+    width: 90%;
+  }  
+  p {
+    color:white;
+  }
+  .nav-item{
+    color:white;
+  }
+
+  .matFormFieldUnderline{
+    bottom: 1.25em;
+    background-color: rgba(0,0,0,.42);
+    height: 1px;
+    margin-top:5px;
+  }
+
+  button{
+    background-color: lightgray;
+    /*border: 1px solid transparent;*/
+}
+/*input{
+  border: 1px solid transparent;
+  font-size: 13px;
+  font-family:Arial, Helvetica, sans-serif;
+}*/
+.text1{
+  margin-left: 15px;
+}
+/*
+.div{
+  width: 8px;
+ 
+  height: 72px;
+  border: 1px solid white;
+  margin-top: -89px;
+  margin-left: 710px;
+  transform: skewX(-40deg);
+  background-color: white;;  
+}
+.divone{
+  width: 8px;
+  height: 92px;
+  border: 1px solid white;
+  margin-top: -89px;
+  margin-left: 700px;
+  transform: skewX(-40deg);
+  background-color: white;
+}
+*/
+.div{
+  width: 9px;
+ /* height: 82px;*/
+  height: 72px;
+  
+  margin-top: -89px;
+  
+  margin-left: 710px;
+  transform: skewX(-50deg); 
+ /* background-color: white;*/
+  background-color:rgb(160, 23, 23); 
+}
+.divone{
+  width: 9px;
+  height: 92px; 
+  border: 1px solid white;
+  margin-top: -93px; 
+  margin-left: 690px;  /*680px*/
+  transform: skewX(-50deg);
+  background-color: white; 
+
+  
+}
+
+.divtwo{
+    width: 9px;
+    height: 92px; 
+    border: 1px solid white;
+    margin-top: -93px; 
+    margin-left: 650px; /*660px*/
+    transform: skewX(-50deg);
+   
+    background-color:white;
+  }
+
+  .divthree{
+    width: 9px;
+    height: 92px; 
+    border: 1px solid white;
+    margin-top: -93px;
+    margin-left: 630px;
+    transform: skewX(-50deg);
+  
+    background-color:white;
+  }
+
+  .divfour{
+    width: 9px;
+    height: 92px;
+    border: 1px solid white;
+    margin-top: -93px; 
+    margin-left: 580px;
+    transform: skewX(-50deg);
+   
+    background-color:white;
+  }
+
+  .divfive{
+    width: 200px; /*120px 150px*/
+    height: 92px;
+    border: 1px solid white;
+    margin-top: -93px; 
+    /* margin-left: 330px; 580px  480px 350px*/
+    margin-left: 300px;
+    transform: skewX(-50deg);
+   
+    background-color:white;
+  }
+/*.form-inline{
+  margin-top: -20px;
+}*/
+
+@media (max-width: 768px) {
+  .serach{
+      margin-left: 15px;
+  }
+  
+}
+button{
+  background-color: lightgray;
+  border: 1px solid transparent;
+}
+.ng-select-required div > div > span {
+  border-left:solid 3px red !important;
+  }
+
+  .form-control form-control-sm mr-3 w-75{
+    border-left:solid 3px red !important;
+  }
+ 

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.display{
+  width:1px;
+  height:40px;
+  background:#8FD3D3;
+  margin:50px auto;
+  color:#fff;
+  padding:10px;
+  font-size:2em;
+  text-align:center;
+  
+  -webkit-transform:skew(-50deg);
+  -moz-transform:skew(-50deg);
+  transform:skew(-50deg);
+}
+
+.active-pink .fa,
+.active-pink-2 .fa {
+color: #f48fb1;
+}
+input[type="search"] {
+    padding-right:32px;
+}
+
+.search-container {
+    position:relative;
+    width:20%;
+    margin-left:5%; 
+     
+
+ }
+
+.search-container > input[type="search"] + span {
+    position:absolute;
+    top:12px;
+    right:10px;
+}
+.material-icons{
+    position: absolute;
+    top:0;
+}
+.input-icons i { 
+            position: absolute; 
+        } 
+          
+        .input-icons { 
+            width: 100%; 
+            margin-bottom: 10px; 
+        } 
+          
+        .icon { 
+            padding: 10px; 
+            color: green; 
+            min-width: 50px; 
+            text-align: center; 
+        } 
+          
+        .input-field { 
+            width: 100%; 
+            padding: 10px; 
+            text-align: center; 
+        } 
+
+</style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid" style="background-color:rgb(160, 23, 23);margin-top: -10px">
+    <div class="navbar-header" style="background-color: white">
+      <a class="navbar-brand" href="#">Logo</a>
+     </div>
+    <ul class="nav navbar-nav navbar-right"> 
+      
+      <li class="nav-item" style="color:white"><a href="#" style="color: white;">Home</a></li>
+      <li class="nav-item"><a href="#" style="color: white;"> Contact Us</a></li>
+      <li class="nav-item"><a href="#" style="color: white;"> Know Your hirarchy</a></li>
+      <li class="nav-item"><a href="#" style="color: white;"> Download</a></li>
+      <li class="nav-item"><a href="#" style="color: white;"> Admin</a></li><br>
+   
+      
+    <li><h4><p class="text-white head" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dealer Management System</p></h4></li>
+          
+    </ul>
+  </div>
+</nav>
+
+<!--<div class="div"></div>
+<div class="divone"></div>-->
+<div class="div"></div>
+     <div class="divone"></div>
+    <div class="divtwo"></div>
+    <div class="divthree"></div>
+    <div class="divfour"></div>
+    <div class="divfive"></div>
+
+<div>
+  <app-top-menu></app-top-menu>
+</div>
+
+<div class="container">
+  <h4 style="color:rgb(160, 23, 23)">Sales>FG Sales>Enquiry Management>Create Enquiry</h4>
+</div>
+
+  <div class="container">
+<div class="row">
+<div class="col-md-3">
+
+ 
+    <form class="navbar-form navbar-right" role="search">
+      <div class="input-group">
+          <input type="text" class="form-control" placeholder="Enquiry Number" name="srch-term" id="srch-term">
+          <div class="input-group-btn">
+              <button class="btn" type="submit"><i class="glyphicon glyphicon-search"></i>
+
+              </button>
+          </div>
+      </div>
+  </form>
+         
+      
+
+</div>
+<div class="col-md-3">
+    
+
+     
+      <form class="navbar-form navbar-right" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Customer Code" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" ><i class="glyphicon glyphicon-search"></i>
+                  
+                  
+                </button>
+            </div>
+        </div>
+    </form>
+      
+</div>
+ <div class="col-md-3">
+ </div>
+    <div class="col-md-3">
+    </div>
+</div>
+</div>
+
+ <div class="container">
+    <h4>Dealers Details</h4>
+   
+  </div>
+ <div class="container">
+    <div class="row">
+    
+    <div class="col-md-2">
+    <div class="form-group ml-3">
+      <mat-form-field>
+          <input matInput [matDatepicker]="picker3" placeholder="Enquiry date" [value]="date.value">
+          <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+          <mat-datepicker #picker3></mat-datepicker>
+        </mat-form-field>
+      </div>
+  </div>
+    <div class="col-md-2" >
+        
+        
+       <div>
+          <ng-select [allowClear]="true"
+          [items]="arrsource"
+          [disabled]="disabled"
+          (data)="refreshValue($event)"
+          (selected)="selected($event)"
+          (removed)="removed($event)"
+          (typed)="typed($event)"
+          placeholder="Dealer Branch/Outlet">
+  </ng-select>
+  </div>
+
+        
+      </div>
+      <div class="col-md-2">
+        <div>
+        <ng-select [allowClear]="true"
+        [items]="items"
+        [disabled]="disabled"
+        (data)="refreshValue($event)"
+        (selected)="selected($event)"
+        (removed)="removed($event)"
+        (typed)="typed($event)"
+        placeholder="Sales Officer">
+</ng-select>
+</div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <ng-select [allowClear]="true"
+            [items]="arrsource"
+            [disabled]="disabled"
+            (data)="refreshValue($event)"
+            (selected)="selected($event)"
+            (removed)="removed($event)"
+            (typed)="typed($event)"
+            placeholder="Source">
+    </ng-select>
+    </div>
+          </div>
+          <div class="col-md-2">
+              <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Source Details" required
+              >
+              
+            </div>
+            <div class="col-md-2">
+              <div>
+                <ng-select [allowClear]="true"
+                [items]="arrsource"
+                [disabled]="disabled"
+                (data)="refreshValue($event)"
+                (selected)="selected($event)"
+                (removed)="removed($event)"
+                (typed)="typed($event)"
+                placeholder="Ongoing Events">
+        </ng-select>
+        </div>
+              </div>
+             
+</div>
+    </div>
+<div class="container">
+    <h4>Prospect Details</h4>
+    
+  </div>
+  <div class="container">
+      <div class="row">
+      <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+        <div>
+          <ng-select
+        
+          [allowClear]="true"
+          [items]="arrsource"
+          [disabled]="disabled"
+          (data)="refreshValue($event)"
+          (selected)="selected($event)"
+          (removed)="removed($event)"
+          (typed)="typed($event)"
+          placeholder="Customer Type"
+        
+          >
+  </ng-select>
+  
+
+  </div>
+      </div>
+      <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+        <div>
+          <ng-select [allowClear]="true"
+          [items]="arrsource"
+          [disabled]="disabled"
+          (data)="refreshValue($event)"
+          (selected)="selected($event)"
+          (removed)="removed($event)"
+          (typed)="typed($event)"
+          placeholder="Tittle">
+  </ng-select>
+  </div>
+        </div>
+        <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="First Name"  aria-label="Search"
+            mdbInput>
+           
+          </div>
+          <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+              <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Relation " aria-label="Search"
+              mdbInput>
+            </div>
+            <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Middle Name" aria-label="Search"
+                mdbInput>
+              </div>
+              <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                  <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Last Name" aria-label="Search"
+                  mdbInput>
+                </div>
+               
+  </div>
+      </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+              <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Date Of Birth" aria-label="Search"
+              mdbInput>
+          </div>
+          <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+              <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Age " aria-label="Search"
+              mdbInput>
+            </div>
+            <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Mobile Number" aria-label="Search"
+                mdbInput>
+              </div>
+              <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                  <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Alternate Mobile Number " aria-label="Search"
+                  mdbInput>
+                </div>
+                <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Email" aria-label="Search"
+                    mdbInput>
+                  </div>
+                  <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                    <div>
+                      <ng-select [allowClear]="true"
+                      [items]="arrsource"
+                      [disabled]="disabled"
+                      (data)="refreshValue($event)"
+                      (selected)="selected($event)"
+                      (removed)="removed($event)"
+                      (typed)="typed($event)"
+                      placeholder="Country">
+              </ng-select>
+              </div>
+                    </div>
+                   
+      </div>
+          </div>
+
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                  <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Territory" aria-label="Search"
+                  mdbInput>
+              </div>
+              <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                <div>
+                  <ng-select [allowClear]="true"
+                  [items]="arrsource"
+                  [disabled]="disabled"
+                  (data)="refreshValue($event)"
+                  (selected)="selected($event)"
+                  (removed)="removed($event)"
+                  (typed)="typed($event)"
+                  placeholder="State">
+          </ng-select>
+          </div>
+                </div>
+                <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                  <div>
+                    <ng-select [allowClear]="true"
+                    [items]="arrsource"
+                    [disabled]="disabled"
+                    (data)="refreshValue($event)"
+                    (selected)="selected($event)"
+                    (removed)="removed($event)"
+                    (typed)="typed($event)"
+                    placeholder="District">
+            </ng-select>
+            </div>
+                  </div>
+                  <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                      <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Tehsil " aria-label="Search"
+                      mdbInput>
+                    </div>
+                    <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                      <div>
+                        <ng-select [allowClear]="true"
+                        [items]="arrsource"
+                        [disabled]="disabled"
+                        (data)="refreshValue($event)"
+                        (selected)="selected($event)"
+                        (removed)="removed($event)"
+                        (typed)="typed($event)"
+                        placeholder="City/Village">
+                </ng-select>
+                </div>
+                      </div>
+                      <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                          <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Pincode" aria-label="Search"
+                          mdbInput>
+                        </div>
+                       
+          </div>
+              </div>
+
+              <div class="container">
+                <h4>Prospect Background</h4>
+                
+              </div>
+
+              <div class="container">
+                <div class="row">
+                    <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                      <div>
+                        <ng-select [allowClear]="true"
+                        [items]="arrsource"
+                        [disabled]="disabled"
+                        (data)="refreshValue($event)"
+                        (selected)="selected($event)"
+                        (removed)="removed($event)"
+                        (typed)="typed($event)"
+                        placeholder="Annual Income">
+                </ng-select>
+                </div>
+                </div>
+                <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                  <div>
+                    <ng-select [allowClear]="true"
+                    [items]="arrsource"
+                    [disabled]="disabled"
+                    (data)="refreshValue($event)"
+                    (selected)="selected($event)"
+                    (removed)="removed($event)"
+                    (typed)="typed($event)"
+                    placeholder="Occupation">
+            </ng-select>
+            </div>
+                  </div>
+                  <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                      <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Land Size(In Acres)" aria-label="Search"
+                      mdbInput>
+                    </div>
+                    <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                      <div>
+                        <ng-select [allowClear]="true"
+                        [items]="arrsource"
+                        [disabled]="disabled"
+                        (data)="refreshValue($event)"
+                        (selected)="selected($event)"
+                        (removed)="removed($event)"
+                        (typed)="typed($event)"
+                        placeholder="Soil Type Consistensy">
+                </ng-select>
+                </div>
+                      </div>
+                      <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                        <div>
+                          <ng-select [allowClear]="true"
+                          [items]="arrsource"
+                          [disabled]="disabled"
+                          (data)="refreshValue($event)"
+                          (selected)="selected($event)"
+                          (removed)="removed($event)"
+                          (typed)="typed($event)"
+                          placeholder="Crops Grown">
+                  </ng-select>
+                  </div>
+                        </div>
+                        <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                          
+                            <ng-multiselect-dropdown
+  [placeholder]=""
+  [data]="dropdownList"
+  [(ngModel)]="selectedItems"
+  [settings]="dropdownSettings"
+  (onSelect)="onItemSelect($event)"
+  (onSelectAll)="onSelectAll($event)"
+>
+</ng-multiselect-dropdown>
+                          </div>
+                         
+            </div>
+                </div>
+                <div class="container">
+                  <h4>Tractor Details</h4>
+                  
+                </div>
+  
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                        <div>
+                          <ng-select [allowClear]="true"
+                          [items]="arrsource"
+                          [disabled]="disabled"
+                          (data)="refreshValue($event)"
+                          (selected)="selected($event)"
+                          (removed)="removed($event)"
+                          (typed)="typed($event)"
+                          placeholder="Make">
+                  </ng-select>
+                  </div>
+                  </div>
+                  <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                    <div>
+                      <ng-select [allowClear]="true"
+                      [items]="arrsource"
+                      [disabled]="disabled"
+                      (data)="refreshValue($event)"
+                      (selected)="selected($event)"
+                      (removed)="removed($event)"
+                      (typed)="typed($event)"
+                      placeholder="Model">
+              </ng-select>
+              </div>
+                    </div>
+                    <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                      <div>
+                        <ng-select [allowClear]="true"
+                        [items]="arrsource"
+                        [disabled]="disabled"
+                        (data)="refreshValue($event)"
+                        (selected)="selected($event)"
+                        (removed)="removed($event)"
+                        (typed)="typed($event)"
+                        placeholder="HP">
+                </ng-select>
+                </div>
+                      </div>
+                      <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                        <div>
+                          <ng-select [allowClear]="true"
+                          [items]="arrsource"
+                          [disabled]="disabled"
+                          (data)="refreshValue($event)"
+                          (selected)="selected($event)"
+                          (removed)="removed($event)"
+                          (typed)="typed($event)"
+                          placeholder="Year Of Purchase">
+                  </ng-select>
+                  </div>
+                        </div>
+                        <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                          <div>
+                            <ng-select [allowClear]="true"
+                            [items]="arrsource"
+                            [disabled]="disabled"
+                            (data)="refreshValue($event)"
+                            (selected)="selected($event)"
+                            (removed)="removed($event)"
+                            (typed)="typed($event)"
+                            placeholder="PTO Speed">
+                    </ng-select>
+                    </div>
+                          </div>
+                          <div class="col-md-2" style="padding-bottom: 6px;padding-top: 6px;">
+                            <div>
+                              <ng-select [allowClear]="true"
+                              [items]="arrsource"
+                              [disabled]="disabled"
+                              (data)="refreshValue($event)"
+                              (selected)="selected($event)"
+                              (removed)="removed($event)"
+                              (typed)="typed($event)"
+                              placeholder="Hypothecation">
+                      </ng-select>
+                      </div>
+                            </div>
+                           
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  
+                </div>
+                <div class="col-md-3">
+                  
+                </div>
+                
+                <div class="col-md-3">
+                  <input type="button" value="Next" class="btn btn-danger" (click)="onNext()">
+                  
+                </div>
+
+                <div class="col-md-3">
+                </div>
+
+              </div>
+              
+                  </div>
+                
+
+</body>
+
+</html>
+<!--<app-nextpage></app-nextpage>-->
+<!--<div class="container">
+   <router-outlet></router-outlet>
+</div>
+-->
+
+
+

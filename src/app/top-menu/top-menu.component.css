@@ -1,0 +1,36 @@
+.button{
+    background-color: lightgray;
+    border: 1px solid #cfcece;
+    width: 150px;
+   text-align: left;
+   font-size: 15px;
+   font-family: "Niramit";
+}
+.btn1{
+    width: 190px;
+}
+@media (max-width: 768px) {
+    .button, .btn1{
+        width: 180px;
+    }
+  } 
+.btn2{
+    background-color: rgb(160, 23, 23);
+    color: white;
+}
+.breadcrumb{
+    background-color: transparent;
+    font-size: 13px;
+    font-family: "Niramit";
+}
+a{
+    text-decoration: none;
+    color: rgb(160, 23, 23);
+}
+.breadcrumb-item{
+    color:rgb(160, 23, 23);
+}
+.breadcrumb > li + li:before {
+    color: rgb(160, 23, 23);
+    content: ">";  
+}

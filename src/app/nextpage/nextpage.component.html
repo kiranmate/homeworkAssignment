@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style></style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid" style="background-color:rgb(160, 23, 23);margin-top: -10px">
+          <div class="navbar-header" style="background-color: white">
+            <a class="navbar-brand" href="#">Logo</a>
+           </div>
+          <ul class="nav navbar-nav navbar-right"> <!--style="font-size: 0%;line-height:0%"-->
+            
+            <li class="nav-item" style="color:white"><a href="#"><!--<span class="glyphicon glyphicon-user"></span>-->Home</a></li>
+            <li class="nav-item"><a href="#"> Contact Us</a></li>
+            <li class="nav-item"><a href="#"> Know Your hirarchy</a></li>
+            <li class="nav-item"><a href="#"> Download</a></li>
+            <li class="nav-item"><a href="#"> Admin</a></li><br>
+         
+            <li><h4><p class="text-white head" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dealer Management System</p></h4></li>
+          </ul>
+        </div>
+      </nav>
+      
+     <div class="div"></div>
+      
+    <div class="divone"></div>
+    <div class="divtwo"></div>
+
+    <div class="divthree"></div>
+    <div class="divfour"></div>
+    
+    <div class="divfive"></div>
+
+        <div>
+        <app-top-menu></app-top-menu>
+      </div>
+
+      
+      <div class="container">
+        <h4 style="color:rgb(160, 23, 23)">Sales>FG Sales>Enquiry Management>Create Enquiry</h4>
+      </div>
+      <div class="container">
+        <h4>Existing Machine Details</h4>
+        <div class="row">
+          <div class="col-md-2">
+            <div>
+              <ng-select
+            
+              [allowClear]="true"
+              [items]="equipment"
+              [disabled]="disabled"
+              (data)="refreshValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              (typed)="typed($event)"
+              placeholder="PTO Driven Equipment"
+             >
+            </ng-select>
+           </div>
+        </div>
+          <div class="col-md-2">
+            <div>
+              <ng-select
+            
+              [allowClear]="true"
+              [items]="equipment"
+              [disabled]="disabled"
+              (data)="refreshValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              (typed)="typed($event)"
+              placeholder="Select Make"
+             >
+            </ng-select>
+           </div>
+          </div>
+          <div class="col-md-2"><div>
+            <ng-select
+          
+            [allowClear]="true"
+            [items]="equipment"
+            [disabled]="disabled"
+            (data)="refreshValue($event)"
+            (selected)="selected($event)"
+            (removed)="removed($event)"
+            (typed)="typed($event)"
+            placeholder="Equipment Make"
+           >
+          </ng-select>
+         </div></div>
+          <div class="col-md-2">
+            <div>
+              <ng-select
+            
+              [allowClear]="true"
+              [items]="equipment"
+              [disabled]="disabled"
+              (data)="refreshValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              (typed)="typed($event)"
+              placeholder="Select Product"
+             >
+            </ng-select>
+           </div>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+        </div>
+
+        
+      </div>
+      <div class="container">
+        <h4>Interested Machine Details</h4>
+        <div class="row">
+            <div class="col-md-2">
+                <div>
+                    <ng-select
+                  
+                    [allowClear]="true"
+                    [items]="equipment"
+                    [disabled]="disabled"
+                    (data)="refreshValue($event)"
+                    (selected)="selected($event)"
+                    (removed)="removed($event)"
+                    (typed)="typed($event)"
+                    placeholder="Select Product Category"
+                   >
+                  </ng-select>
+                 </div>
+            </div>
+            <div class="col-md-2">
+                <div>
+                    <ng-select
+                  
+                    [allowClear]="true"
+                    [items]="equipment"
+                    [disabled]="disabled"
+                    (data)="refreshValue($event)"
+                    (selected)="selected($event)"
+                    (removed)="removed($event)"
+                    (typed)="typed($event)"
+                    placeholder="Select Product Category"
+                   >
+                  </ng-select>
+                 </div>
+            </div>
+            <div class="col-md-2">
+                <div>
+                    <ng-select
+                  
+                    [allowClear]="true"
+                    [items]="equipment"
+                    [disabled]="disabled"
+                    (data)="refreshValue($event)"
+                    (selected)="selected($event)"
+                    (removed)="removed($event)"
+                    (typed)="typed($event)"
+                    placeholder="Select Product Type"
+                   >
+                  </ng-select>
+                 </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+          </div>
+        </div>
+           <div class="container">
+          <div class="row"><!--middle table details here-->
+            <div class="mt-3">
+               
+              <table class="table table-bordered table-sm text-black-50" style="margin: 10px">
+                <thead style="background-color:#e7e7e7;">
+                  <tr>
+                    <th scope="col" class="th-col1">S.No</th>
+                    <th scope="col" class="th-col1">Specification</th>
+                    <th scope="col" class="th-col1">Select Specification</th>
+                    <th scope="col" class="th-col1"> </th>
+                     </tr>
+                </thead>
+                <tbody style="background-color: white;">
+                  <tr style="height:3%;padding: 0%">
+                    <th scope="row"><small>01</small></th>
+                    <td><small>Model</small></td>
+                    <td><small></small></td>
+                    <td> 
+                        <div>
+                            <ng-select
+                          
+                            [allowClear]="true"
+                            [items]="arrselect"
+                            [disabled]="disabled"
+                            (data)="refreshValue($event)"
+                            (selected)="selected($event)"
+                            (removed)="removed($event)"
+                            (typed)="typed($event)"
+                            placeholder="Select"
+                          
+                            >
+                    </ng-select>
+                    
+                  
+                    </div>
+                    </td>
+                    
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row"><small>02</small></th>
+                    <td><small>Varient</small></td>
+                    <td></td>
+                    <td>
+                        <div>
+                            <ng-select
+                          
+                            [allowClear]="true"
+                            [items]="arrselect"
+                            [disabled]="disabled"
+                            (data)="refreshValue($event)"
+                            (selected)="selected($event)"
+                            (removed)="removed($event)"
+                            (typed)="typed($event)"
+                            placeholder="Select"
+                          
+                            >
+                    </ng-select>
+                    
+                  
+                    </div>
+                    </td>
+                    
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row"><small>03</small></th>
+                    <td><small>Speed</small></td>
+                    <td></td>
+                    <td>
+                        <div>
+                            <ng-select
+                          
+                            [allowClear]="true"
+                            [items]="arrselect"
+                            [disabled]="disabled"
+                            (data)="refreshValue($event)"
+                            (selected)="selected($event)"
+                            (removed)="removed($event)"
+                            (typed)="typed($event)"
+                            placeholder="Select"
+                          
+                            >
+                    </ng-select>
+                    
+                  
+                    </div>
+                    </td>
+                    
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row"><small>04</small></th>
+                    <td><small>Blade</small></td>
+                    <td></td>
+                    <td>
+
+                        <div>
+                            <ng-select
+                          
+                            [allowClear]="true"
+                            [items]="arrselect"
+                            [disabled]="disabled"
+                            (data)="refreshValue($event)"
+                            (selected)="selected($event)"
+                            (removed)="removed($event)"
+                            (typed)="typed($event)"
+                            placeholder="Select"
+                          
+                            >
+                    </ng-select>
+                    
+                  
+                    </div>
+                    </td>
+                   
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row"><small>05</small></th>
+                    <td><small>Gear Type</small></td>
+                    <td></td>
+                    <td>
+                        <div>
+                            <ng-select
+                          
+                            [allowClear]="true"
+                            [items]="arrselect"
+                            [disabled]="disabled"
+                            (data)="refreshValue($event)"
+                            (selected)="selected($event)"
+                            (removed)="removed($event)"
+                            (typed)="typed($event)"
+                            placeholder="Select"
+                          
+                            >
+                    </ng-select>
+                    </div>
+
+                    </td>
+                   
+                    
+                  </tr>
+                </tbody>
+              </table>
+
+              
+             
+             
+              
+              </div>
+              
+          </div><!--middle table details here-->
+          <div class="row">
+              <div class="col-md-2">
+                  <div>
+                      <ng-select
+                    
+                      [allowClear]="true"
+                      [items]="arrselect"
+                      [disabled]="disabled"
+                      (data)="refreshValue($event)"
+                      (selected)="selected($event)"
+                      (removed)="removed($event)"
+                      (typed)="typed($event)"
+                      placeholder="Purpose of purchase">
+                    </ng-select>
+                
+               </div>
+
+              </div>
+              <div class="col-md-2">
+                    <ng-select
+                          
+                            [allowClear]="true"
+                            [items]="arrselect"
+                            [disabled]="disabled"
+                            (data)="refreshValue($event)"
+                            (selected)="selected($event)"
+                            (removed)="removed($event)"
+                            (typed)="typed($event)"
+                            placeholder="Subsidy Required"
+                          >
+                    </ng-select>
+                    
+              </div>
+              <div class="col-md-2">
+                  <ng-select
+                          
+                  [allowClear]="true"
+                  [items]="arrselect"
+                  [disabled]="disabled"
+                  (data)="refreshValue($event)"
+                  (selected)="selected($event)"
+                  (removed)="removed($event)"
+                  (typed)="typed($event)"
+                  placeholder="Payment Mode"
+                >
+          </ng-select>
+              </div>
+              <div class="col-md-2">
+                  <div class="form-group ml-3">
+                      <mat-form-field>
+                          <input matInput [matDatepicker]="picker3" placeholder="Expected Delivery date" [value]="date.value">
+                          <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                          <mat-datepicker #picker3></mat-datepicker>
+                        </mat-form-field>
+                      </div>
+              </div>
+              <div class="col-md-2">
+              
+                <div class="form-group"><!--ml-3-->
+                      <mat-form-field>
+                          <input matInput [matDatepicker]="picker2" placeholder="Next Follow up date" [value]="date1.value">
+                          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                          <mat-datepicker #picker2></mat-datepicker>
+                        </mat-form-field>
+                      </div>
+                    
+              </div>
+              <div class="col-md-2">
+                  <ng-select
+                          
+                  [allowClear]="true"
+                  [items]="arrselect"
+                  [disabled]="disabled"
+                  (data)="refreshValue($event)"
+                  (selected)="selected($event)"
+                  (removed)="removed($event)"
+                  (typed)="typed($event)"
+                  placeholder="Recommended Financer"
+                >
+          </ng-select>
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="text-center">
+                <button class="btn" type="button" style="padding: 13px;margin:15px;">Previous</button>
+
+                  <button class="btn btn-danger" type="button" style="padding: 13px;margin:15px;">Save</button>
+                  <button class="btn btn-danger" type="button" style="padding:13px;margin:15px;">Submit</button>
+              </div>
+            </div>
+
+        </div>
+        
+        
+      
+</body>
+</html>
+<div class="row">
+  <div class="col-md-12">
+    <router-outlet>
+
+    </router-outlet>
+  </div>
+</div>
